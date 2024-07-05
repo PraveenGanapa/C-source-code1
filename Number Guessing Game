@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main() {
+int mynum, usernum; srand(time(NULL));
+mynum =rand()%100+1;
+printf("I have a number in my mind (1-100) can you guess it\n");
+while(1)
+{
+printf("Enter your guess: ");
+scanf("%d",&usernum);
+if(mynum==usernum) {
+printf("You are right");
+break;
+}
+else if (mynum> usernum) {
+printf("My number is grater than %d. Try again \n", usernum);
+}
+else
+{
+printf("My number is less than %d. Try again \n", usernum);
+}
+}
+return 0;
+}
